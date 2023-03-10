@@ -1,3 +1,49 @@
+ul,
+li {
+  list-style: none;
+  padding: 0rem;
+  margin: 0rem;
+}
+
+h2 {
+  margin: 0rem;
+}
+
 body {
   background-color: #522028;
+  background-image: url(./img/bg.jpg);
 }
+
+.container {
+  max-width: calc(300rem / 16);
+  margin: 0rem auto;
+}
+
+.item {
+  background-color: #e7c095;
+}
+
+.title {
+  color: #401520;
+}
+
+input {
+  display: none;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 0rem;
+  transition: 3s;
+}
+
+input:checked + img {
+  max-width: 14rem;
+  transition: 3s;
+
+}
+
+/* label:hover  img {
+  max-width: 14rem;
+} */
