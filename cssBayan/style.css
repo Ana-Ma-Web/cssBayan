@@ -51,14 +51,37 @@ body {
   padding: 0rem 0.5rem 0.5rem;
 }
 
+.input:active~.item_content .title {
+  color: #222831;
+  transition: 0.2s;
+}
+
+.input:checked~.item_content .title {
+  color: #222831;
+}
+
 .icon {
   padding-top: 0.35rem;
   transition: 0.2s;
 }
 
+.input:checked~.item_content .icon {
+  transform: rotate(-90deg);
+  transition: 0.2s;
+}
+
 .arrow {
+  fill: #a03f50;
+  transition: 0.2s;
+}
+
+.input:active~.item_content .arrow {
   fill: #222831;
-  opacity: 0;
+  transition: 0.2s;
+}
+
+.input:checked~.item_content .arrow {
+  fill: #222831;
   transition: 0.2s;
 }
 
@@ -73,15 +96,6 @@ img {
 .input:checked~.item_content img {
   max-width: 100%;
   padding: 0rem;
-  transition: 0.2s;
-}
-
-.input:checked~.item_content .title {
-  color: #222831;
-}
-
-.input:checked~.item_content .icon {
-  transform: rotate(-90deg);
   transition: 0.2s;
 }
 
@@ -101,14 +115,8 @@ img {
     transition: 0.3s;
   }
 
-  .accordion:hover .arrow {
-    opacity: 1;
-    transition: 0.2s;
-  }
-
-  .item:hover img {
-    max-width: 100%;
-    padding: 0rem;
+  .input:active~.item_content .title {
+    color: #a03f50;
     transition: 0.2s;
   }
 
@@ -117,13 +125,24 @@ img {
     transition: 0.2s;
   }
 
+  .arrow {
+    fill: #222831;
+    opacity: 0;
+  }
+
+  .accordion:hover .arrow {
+    opacity: 1;
+    transition: 0.2s;
+  }
+
   .input:active~.item_content .arrow {
     fill: #a03f50;
     transition: 0.2s;
   }
 
-  .input:active~.item_content .title {
-    color: #a03f50;
+  .item:hover img {
+    max-width: 100%;
+    padding: 0rem;
     transition: 0.2s;
   }
 }
