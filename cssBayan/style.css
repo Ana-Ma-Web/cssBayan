@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700;1,900&display=swap');
 ul,
 li {
   list-style: none;
@@ -15,16 +16,38 @@ body {
 }
 
 .container {
-  max-width: calc(300rem / 16);
+  /* min-width: calc(300rem / 16); */
+  width: 95%;
+  max-width: calc(600rem / 16);
   margin: 0rem auto;
 }
 
+.list {
+
+  box-shadow: calc(3rem / 16) calc(3rem / 16) calc(7rem / 16) #250f13;
+}
 .item {
-  background-color: #e7c095;
+  /* background-color: #e3d3c2; */
+  /* margin-bottom: 1rem; */
+  background-color: #ffffff;
+
+}
+
+.label {
+  
+}
+
+.item_content {
+  padding: 1rem 0.25rem 0.25rem;
+
 }
 
 .title {
-  color: #401520;
+  /* color: #401520; */
+  font-family: Nunito;
+  font-weight: normal;
+  color: #222831;
+  padding: 0rem 0.5rem 0.5rem;
 }
 
 input {
@@ -35,13 +58,15 @@ img {
   display: block;
   margin: 0 auto;
   max-width: 0rem;
-  transition: 3s;
+  transition: 0.4s;
+  padding: 0rem;
 }
 
 input:checked + img {
-  max-width: 14rem;
-  transition: 3s;
-
+  /* max-width: calc(300rem / 16 - 0.5rem); */
+  max-width: 100%;
+  transition: 0.4s;
+  padding: 0rem;
 }
 
 /* label:hover  img {
