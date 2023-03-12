@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+ul,
+li {
+  list-style: none;
+  padding: 0rem;
+  margin: 0rem;
+}
+
+h2 {
+  margin: 0rem;
+}
+
+body {
+  background-color: #522028;
+  background-image: url(./img/bg.jpg);
+}
+
+.container {
+  width: 95%;
+  max-width: calc(600rem / 16);
+  margin: 0rem auto;
+}
+
+.accordion {
+  box-shadow: calc(3rem / 16) calc(3rem / 16) calc(7rem / 16) #250f13;
+}
+
+.item {
+  background-color: #ffffff;
+}
+
+.item:not(:last-child) {
+  border-bottom: calc(1rem/16) solid #a03f50;
+}
+
+.input {
+  display: none;
+}
+
+.item_content {
+  cursor: pointer;
+  padding: 0.75rem 0.25rem 0.25rem;
+}
+
+.title {
+  font-family: Nunito;
+  display: flex;
+  justify-content: space-between;
+  color: #a03f50;
+  padding: 0rem 0.5rem 0.5rem;
+}
+
+.input:active~.item_content .title {
+  color: #222831;
+  transition: 0.2s;
+}
+
+.input:checked~.item_content .title {
+  color: #222831;
+}
+
+.icon {
+  padding-top: 0.35rem;
+  transition: 0.2s;
+}
+
+.input:checked~.item_content .icon {
+  transform: rotate(-90deg);
+  transition: 0.2s;
+}
+
+.arrow {
+  fill: #a03f50;
+  transition: 0.2s;
+}
+
+.input:active~.item_content .arrow {
+  fill: #222831;
+  transition: 0.2s;
+}
+
+.input:checked~.item_content .arrow {
+  fill: #222831;
+  transition: 0.2s;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 0rem;
+  padding: 0rem;
+  transition: 0.2s;
+}
+
+.input:checked~.item_content img {
+  max-width: 100%;
+  padding: 0rem;
+  transition: 0.2s;
+}
+
+@media (min-width: 820px) {
+  .title {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (hover: hover) {
+
+  .accordion:hover .title {
+    color: #222831;
+    transition: 0.3s;
+  }
+
+  .input:active~.item_content .title {
+    color: #a03f50;
+    transition: 0.2s;
+  }
+
+  .item:hover .icon {
+    transform: rotate(-90deg);
+    transition: 0.2s;
+  }
+
+  .arrow {
+    fill: #222831;
+    opacity: 0;
+  }
+
+  .accordion:hover .arrow {
+    opacity: 1;
+    transition: 0.2s;
+  }
+
+  .input:active~.item_content .arrow {
+    fill: #a03f50;
+    transition: 0.2s;
+  }
+
+  .item:hover img {
+    max-width: 100%;
+    padding: 0rem;
+    transition: 0.2s;
+  }
+}
